@@ -57,7 +57,7 @@ function clickOnTile(temp, e){
 				youLoseSing.style.display = "block";
 				youLoseSing.style.color = "green";
 				youLoseSing.innerText = "YOU WIN";
-				document.cookie = "high="+timerMin+":"+timerSec+":"+timerMill+"; expires=Fri, 18 September 2099 11:00:00 UTC; path=/";
+				document.cookie = "minehigh="+timerMin+":"+timerSec+":"+timerMill+"; expires=Fri, 18 September 2099 11:00:00 UTC; path=/";
 			}
 		}
 		else{
@@ -101,11 +101,11 @@ function startGameTimer(){
 getCookie();
 function getCookie(){
 	let cDecoded = decodeURIComponent(document.cookie);
-	let cArray = cDecoded.slice(5, cDecoded.length+1).split(":");
+	let cArray = cDecoded.slice(9, cDecoded.length+1).split(":");
 	highScoreMin = cArray[0];
 	highScoreSec = cArray[1];
 	highScoreMil = cArray[2];
-	if(cArray[0] == "undefined"){
+	if(cArray[0] == undefined){
 		highScoreMin = 0;
 		highScoreSec = 0;
 		highScoreMil = 0;
