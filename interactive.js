@@ -11,7 +11,7 @@ difficultyButton.addEventListener('click', () => {
         gameDifficulty = 80;
     }
     else if(gameDifficulty == 80){
-        difficultyButton.innerText = "Pussyretardlevel";
+        difficultyButton.innerText = "Normal";
         gameDifficulty = 40;
     }
     bombCounter = gameDifficulty;
